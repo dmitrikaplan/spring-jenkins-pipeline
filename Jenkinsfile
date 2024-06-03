@@ -8,7 +8,10 @@ pipeline{
         }
         stage("run"){
             steps{
-                sh 'java -jar /build/libs/spring-jenkins-pipeline-test.jar'
+                sh '''
+                ls -hal
+                java -jar /build/libs/spring-jenkins-pipeline-test.jar
+                '''
             }
         }
     }
