@@ -10,7 +10,7 @@ pipeline{
             steps{
                 sh '''
                 ls -hal
-                java -jar /build/libs/spring-jenkins-pipeline-test.jar
+                java -jar ./build/libs/spring-jenkins-pipeline-test.jar
                 '''
             }
         }
