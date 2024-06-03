@@ -3,12 +3,12 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                ./gradlew build
+                sh ./gradlew build
             }
         }
         stage("run"){
             steps{
-                java -jar /build/libs/spring-jenkins-pipeline-test.jar
+                sh java -jar /build/libs/spring-jenkins-pipeline-test.jar
             }
         }
     }
