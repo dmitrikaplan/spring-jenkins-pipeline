@@ -5,6 +5,7 @@ pipeline{
             steps{
                 echo 'BUILD ................................'
                 sh 'gradle build'
+                echo 'BUILD END .................................'
             }
         }
         stage("run"){
