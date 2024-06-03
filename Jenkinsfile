@@ -3,7 +3,12 @@ pipeline{
     stages{
         stage("build"){
             steps{
-                echo "Hello, world!"
+                ./gradlew build
+            }
+        }
+        stage("run"){
+            steps{
+                java -jar /build/libs/spring-jenkins-pipeline-test.jar
             }
         }
     }
